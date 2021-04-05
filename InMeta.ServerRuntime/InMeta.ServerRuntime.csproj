@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: V:\20210126 УЖКХ\InMeta_ServerRuntime_dll\InMeta.ServerRuntime.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{32330F2B-A4B4-43BD-8B01-AB48C1DC69EA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>InMeta.ServerRuntime</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <ApplicationVersion>1.9.112.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Integro" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Integro\InMeta\Web\Utils.cs" />
+    <Compile Include="Integro\InMeta\Web\WebPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Integro\InMeta\Web\WebService.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Integro\InMeta\Runtime\CodeGeneratorOptions.cs" />
+    <Compile Include="Integro\InMeta\Runtime\CodeGenerator.cs" />
+    <Compile Include="Integro\InMeta\Runtime\FileAttachment.cs" />
+    <Compile Include="Integro\InMeta\Runtime\DataId.cs" />
+    <Compile Include="Integro\InMeta\Runtime\IdGroup.cs" />
+    <Compile Include="Integro\InMeta\Runtime\IdGroupList.cs" />
+    <Compile Include="Integro\InMeta\Runtime\IdConverter.cs" />
+    <Compile Include="Integro\InMeta\Runtime\IndexSet.cs" />
+    <Compile Include="Integro\InMeta\Runtime\ObjectFileAttachments.cs" />
+    <Compile Include="Integro\InMeta\Runtime\InMetaException.cs" />
+    <Compile Include="Integro\InMeta\Runtime\ObjectListLoader.cs" />
+    <Compile Include="Integro\InMeta\Runtime\ObjectListLoaderByCondition.cs" />
+    <Compile Include="Integro\InMeta\Runtime\ObjectListLoaderByIds.cs" />
+    <Compile Include="Integro\InMeta\Runtime\ObjectPartLoader.cs" />
+    <Compile Include="Integro\InMeta\Runtime\ChildsLoader.cs" />
+    <Compile Include="Integro\InMeta\Runtime\DataPropertyLoader.cs" />
+    <Compile Include="Integro\InMeta\Runtime\LinkPropertyLoader.cs" />
+    <Compile Include="Integro\InMeta\Runtime\ObjectViewLoader.cs" />
+    <Compile Include="Integro\InMeta\Runtime\Navigator.cs" />
+    <Compile Include="Integro\InMeta\Runtime\AssociationNavigator.cs" />
+    <Compile Include="Integro\InMeta\Runtime\ChildRefNavigator.cs" />
+    <Compile Include="Integro\InMeta\Runtime\ExternalLinkNavigator.cs" />
+    <Compile Include="Integro\InMeta\Runtime\MemberValueGetter.cs" />
+    <Compile Include="Integro\InMeta\Runtime\IdGetter.cs" />
+    <Compile Include="Integro\InMeta\Runtime\ObjByPropsComparer.cs" />
+    <Compile Include="Integro\InMeta\Runtime\IDataObjectList.cs" />
+    <Compile Include="Integro\InMeta\Runtime\DataObjectList.cs" />
+    <Compile Include="Integro\InMeta\Runtime\DataObjectChildList.cs" />
+    <Compile Include="Integro\InMeta\Runtime\DataException.cs" />
+    <Compile Include="Integro\InMeta\Runtime\ObjectSessionState.cs" />
+    <Compile Include="Integro\InMeta\Runtime\DataObjectRef.cs" />
+    <Compile Include="Integro\InMeta\Runtime\DataObject.cs" />
+    <Compile Include="Integro\InMeta\Runtime\DataObjectExternalLink.cs" />
+    <Compile Include="Integro\InMeta\Runtime\DataObjectExternalLinks.cs" />
+    <Compile Include="Integro\InMeta\Runtime\ObjectViewEvaluator.cs" />
+    <Compile Include="Integro\InMeta\Runtime\LoadContext.cs" />
+    <Compile Include="Integro\InMeta\Runtime\PropertyStateFilter.cs" />
+    <Compile Include="Integro\InMeta\Runtime\DataProperty.cs" />
+    <Compile Include="Integro\InMeta\Runtime\StringProperty.cs" />
+    <Compile Include="Integro\InMeta\Runtime\IntegerProperty.cs" />
+    <Compile Include="Integro\InMeta\Runtime\DoubleProperty.cs" />
+    <Compile Include="Integro\InMeta\Runtime\DateTimeProperty.cs" />
+    <Compile Include="Integro\InMeta\Runtime\BooleanProperty.cs" />
+    <Compile Include="Integro\InMeta\Runtime\CurrencyProperty.cs" />
+    <Compile Include="Integro\InMeta\Runtime\BinaryProperty.cs" />
+    <Compile Include="Integro\InMeta\Runtime\LinkProperty.cs" />
+    <Compile Include="Integro\InMeta\Runtime\ObjectViewParameterLoader.cs" />
+    <Compile Include="Integro\InMeta\Runtime\ObjectViewIdLoader.cs" />
+    <Compile Include="Integro\InMeta\Runtime\ObjectViewPropertyLoader.cs" />
+    <Compile Include="Integro\InMeta\Runtime\ObjectViewScriptRuntime.cs" />
+    <Compile Include="Integro\InMeta\Runtime\ObjectViewTextGetter.cs" />
+    <Compile Include="Integro\InMeta\Runtime\ObjectViewThisObjectLoader.cs" />
+    <Compile Include="Integro\InMeta\Runtime\ObjectViewVirtualPropertyLoader.cs" />
+    <Compile Include="Integro\InMeta\Runtime\PropertyValueGetter.cs" />
+    <Compile Include="Integro\InMeta\Runtime\DataStorage.cs" />
+    <Compile Include="Integro\InMeta\Runtime\Loader.cs" />
+    <Compile Include="Integro\InMeta\Runtime\LoadPlan.cs" />
+    <Compile Include="Integro\InMeta\Runtime\LoadPlanList.cs" />
+    <Compile Include="Integro\InMeta\Runtime\AssociationRefLoadPlan.cs" />
+    <Compile Include="Integro\InMeta\Runtime\AssociationRefLoadPlanList.cs" />
+    <Compile Include="Integro\InMeta\Runtime\ChildRefLoadPlan.cs" />
+    <Compile Include="Integro\InMeta\Runtime\ChildRefLoadPlanList.cs" />
+    <Compile Include="Integro\InMeta\Runtime\ObjectLoader.cs" />
+    <Compile Include="Integro\InMeta\Runtime\CompareOp.cs" />
+    <Compile Include="Integro\InMeta\Runtime\QueryCondition.cs" />
+    <Compile Include="Integro\InMeta\Runtime\Totals.cs" />
+    <Compile Include="Integro\InMeta\Runtime\QueryTotals.cs" />
+    <Compile Include="Integro\InMeta\Runtime\MetadataException.cs" />
+    <Compile Include="Integro\InMeta\Runtime\MetadataClassPurpose.cs" />
+    <Compile Include="Integro\InMeta\Runtime\MetadataPropertyPurpose.cs" />
+    <Compile Include="Integro\InMeta\Runtime\ApplicationMetadata.cs" />
+    <Compile Include="Integro\InMeta\Runtime\MetadataAssociation.cs" />
+    <Compile Include="Integro\InMeta\Runtime\MetadataAssociationList.cs" />
+    <Compile Include="Integro\InMeta\Runtime\AggregationType.cs" />
+    <Compile Include="Integro\InMeta\Runtime\MetadataAssociationRef.cs" />
+    <Compile Include="Integro\InMeta\Runtime\MetadataAssociationRefList.cs" />
+    <Compile Include="Integro\InMeta\Runtime\MetadataChildRef.cs" />
+    <Compile Include="Integro\InMeta\Runtime\MetadataChildRefList.cs" />
+    <Compile Include="Integro\InMeta\Runtime\MetadataClass.cs" />
+    <Compile Include="Integro\InMeta\Runtime\MetadataClassList.cs" />
+    <Compile Include="Integro\InMeta\Runtime\MetadataClassMember.cs" />
+    <Compile Include="Integro\InMeta\Runtime\MetadataVirtualProperty.cs" />
+    <Compile Include="Integro\InMeta\Runtime\MetadataVirtualPropertyList.cs" />
+    <Compile Include="Integro\InMeta\Runtime\ContentType.cs" />
+    <Compile Include="Integro\InMeta\Runtime\MetadataObjectView.cs" />
+    <Compile Include="Integro\InMeta\Runtime\MetadataObjectViewList.cs" />
+    <Compile Include="Integro\InMeta\Runtime\MetadataLookupValue.cs" />
+    <Compile Include="Integro\InMeta\Runtime\MetadataLookupValueList.cs" />
+    <Compile Include="Integro\InMeta\Runtime\MetadataProperty.cs" />
+    <Compile Include="Integro\InMeta\Runtime\MetadataPropertyList.cs" />
+    <Compile Include="Integro\InMeta\Runtime\MetadataScriptLibrary.cs" />
+    <Compile Include="Integro\InMeta\Runtime\MetadataScriptLibraries.cs" />
+    <Compile Include="Integro\InMeta\Runtime\ScriptLibraries.cs" />
+    <Compile Include="Integro\InMeta\Runtime\UpdateLogMode.cs" />
+    <Compile Include="Integro\InMeta\Runtime\ApplicationUser.cs" />
+    <Compile Include="Integro\InMeta\Runtime\ApplicationUserList.cs" />
+    <Compile Include="Integro\InMeta\Runtime\ApplicationDbConfig.cs" />
+    <Compile Include="Integro\InMeta\Runtime\ApplicationConfig.cs" />
+    <Compile Include="Integro\InMeta\Runtime\AttachmentsSettings.cs" />
+    <Compile Include="Integro\InMeta\Runtime\ApplicationSettings.cs" />
+    <Compile Include="Integro\InMeta\Runtime\ReadOnlyDataObject.cs" />
+    <Compile Include="Integro\InMeta\Runtime\SessionUpdateInfo.cs" />
+    <Compile Include="Integro\InMeta\Runtime\ClassUpdatesInfo.cs" />
+    <Compile Include="Integro\InMeta\Runtime\ModifiedObjectInfo.cs" />
+    <Compile Include="Integro\InMeta\Runtime\NewObjectInfo.cs" />
+    <Compile Include="Integro\InMeta\Runtime\ObjectsByPropertyIndexSet.cs" />
+    <Compile Include="Integro\InMeta\Runtime\SessionCommitPlan.cs" />
+    <Compile Include="Integro\InMeta\Runtime\StorageCommitPlan.cs" />
+    <Compile Include="Integro\InMeta\Runtime\UpdatePlan.cs" />
+    <Compile Include="Integro\InMeta\Runtime\HtmlFormatter.cs" />
+    <Compile Include="Integro\InMeta\Runtime\ScriptRuntimeCurrentUser.cs" />
+    <Compile Include="Integro\InMeta\Runtime\MsXmlDocumentEmulator.cs" />
+    <Compile Include="Integro\InMeta\Runtime\MsXmlNodeEmulator.cs" />
+    <Compile Include="Integro\InMeta\Runtime\MsXmlNodeListEmulator.cs" />
+    <Compile Include="Integro\InMeta\Runtime\ScriptErrorFormatter.cs" />
+    <Compile Include="Integro\InMeta\Runtime\XmlToHtmlFormatter.cs" />
+    <Compile Include="Integro\InMeta\Runtime\DataApplication.cs" />
+    <Compile Include="Integro\InMeta\Runtime\DataApplicationState.cs" />
+    <Compile Include="Integro\InMeta\Runtime\DataSession.cs" />
+    <Compile Include="Integro\InMeta\Runtime\UnplannedChildrenLoadingEventArgs.cs" />
+    <Compile Include="Integro\InMeta\Runtime\UnplannedPropertyLoadingEventArgs.cs" />
+    <Compile Include="Integro\InMeta\Runtime\SqlUtils.cs" />
+    <Compile Include="Integro\InMeta\Runtime\Utility.cs" />
+    <Compile Include="Integro\InMeta\Runtime\ScriptErrorOperation.cs" />
+    <Compile Include="Integro\InMeta\Runtime\CentralServer\CentralServer.cs" />
+    <Compile Include="Integro\InMeta\Runtime\CentralServer\CentralServerClient.cs" />
+    <Compile Include="Integro\InMeta\Runtime\CentralServer\CentralServerConnection.cs" />
+    <Compile Include="Integro\InMeta\Runtime\CentralServer\CustomIdGenerator.cs" />
+    <Compile Include="Integro\InMeta\Runtime\CentralServer\IdGenerator.cs" />
+    <Compile Include="Integro\InMeta\Runtime\CentralServer\RemoteIdGenerator.cs" />
+    <Compile Include="Integro\InMeta\Runtime\CentralServer\DirectIdGenerator.cs" />
+    <Compile Include="Integro\InMeta\Attachments\ObjectAttachment.cs" />
+    <Compile Include="Integro\InMeta\Attachments\ObjectAttachments.cs" />
+    <Compile Include="Integro\InDbs\DataType.cs" />
+    <Compile Include="Integro\InDbs\InDbException.cs" />
+    <Compile Include="Integro\InDbs\InDbUtils.cs" />
+    <Compile Include="Integro\InDbs\InDbCommand.cs" />
+    <Compile Include="Integro\InDbs\InDbDatabase.cs" />
+    <Compile Include="Integro\InDbs\InDbIndexDef.cs" />
+    <Compile Include="Integro\InDbs\InDbFieldDef.cs" />
+    <Compile Include="Integro\InDbs\InDbFieldDefs.cs" />
+    <Compile Include="Integro\InDbs\InDbIndexDefs.cs" />
+    <Compile Include="Integro\InDbs\InDbTableDef.cs" />
+    <Compile Include="Integro\InDbs\InDbManager.cs" />
+    <Compile Include="Integro\InDbs\InDbOracleCommand.cs" />
+    <Compile Include="Integro\InDbs\InDbOracleDatabase.cs" />
+    <Compile Include="Integro\InDbs\InDbSqlCommand.cs" />
+    <Compile Include="Integro\InDbs\InDbSqlDatabase.cs" />
+    <Compile Include="InMeta\ServerRuntime\UpdateLogWriter.cs" />
+    <Compile Include="InMeta\ServerRuntime\ScriptRuntimeDataObject.cs" />
+    <Compile Include="InMeta\ServerRuntime\ScriptRuntimeDataObjectChildList.cs" />
+    <Compile Include="InMeta\ServerRuntime\ScriptRuntimeDataObjectList.cs" />
+    <Compile Include="InMeta\ServerRuntime\Metadata\MergeInfo.cs" />
+    <Compile Include="InMeta\ServerRuntime\Metadata\MergeByAttr.cs" />
+    <Compile Include="InMeta\ServerRuntime\Metadata\MergeByNameAttr.cs" />
+    <Compile Include="InMeta\ServerRuntime\Metadata\MergeByNodeName.cs" />
+    <Compile Include="InMeta\ServerRuntime\Metadata\MergeByText.cs" />
+    <Compile Include="InMeta\ServerRuntime\Metadata\MergeFlags.cs" />
+    <Compile Include="InMeta\ServerRuntime\Metadata\MergeAction.cs" />
+    <Compile Include="InMeta\ServerRuntime\Metadata\MergeInputEvent.cs" />
+    <Compile Include="InMeta\ServerRuntime\Metadata\MergeScriptLibrary.cs" />
+    <Compile Include="InMeta\ServerRuntime\Metadata\MetadataElementLoader.cs" />
+    <Compile Include="InMeta\ServerRuntime\Metadata\ApplicationMetadataXml.cs" />
+    <Compile Include="InMeta\ServerRuntime\Metadata\ApplicationMetadataXmlList.cs" />
+    <Compile Include="InMeta\ServerRuntime\Metadata\NoMerge.cs" />
+    <Compile Include="InMeta\ServerRuntime\Load\LoadPlanBuilder.cs" />
+    <Compile Include="InMeta\ServerRuntime\Runtime\SqlPreprocessor.cs" />
+    <Compile Include="InMeta\ServerRuntime\Runtime\OracleSqlPreprocessor.cs" />
+    <Compile Include="InMeta\ServerRuntime\Runtime\MsSqlPreprocessor.cs" />
+    <Compile Include="Scripting\ScriptCodeException.cs" />
+    <Compile Include="Scripting\ScriptControlError.cs" />
+    <Compile Include="Scripting\IActiveScriptSite.cs" />
+    <Compile Include="Scripting\IActiveScriptSiteWindow.cs" />
+    <Compile Include="Scripting\ScriptControl.cs" />
+    <Compile Include="Scripting\HRESULT.cs" />
+    <Compile Include="Scripting\ScriptState.cs" />
+    <Compile Include="Scripting\ScriptThreadState.cs" />
+    <Compile Include="Scripting\ScriptText.cs" />
+    <Compile Include="Scripting\ScriptItem.cs" />
+    <Compile Include="Scripting\ScriptInfo.cs" />
+    <Compile Include="Scripting\IScript.cs" />
+    <Compile Include="Scripting\IActiveScript.cs" />
+    <Compile Include="Scripting\UrlPolicy.cs" />
+    <Compile Include="Scripting\IOleServiceProvider.cs" />
+    <Compile Include="Scripting\ComConstants.cs" />
+    <Compile Include="Scripting\IObjectSafety.cs" />
+    <Compile Include="Scripting\IInternetHostSecurityManager.cs" />
+    <Compile Include="Scripting\IActiveScriptError.cs" />
+    <Compile Include="Scripting\IActiveScriptParse32.cs" />
+    <Compile Include="Scripting\IActiveScriptParse64.cs" />
+    <Compile Include="Scripting\ActiveScriptParseWrapper.cs" />
+    <Compile Include="Compatibility\InteropUtility.cs" />
+    <Compile Include="Compatibility\IISUtils\IISUtilsObject.cs" />
+    <Compile Include="Compatibility\InDBX\InDbxCursor.cs" />
+    <Compile Include="Compatibility\InDBX\InDbxDb.cs" />
+    <Compile Include="Compatibility\InMetaManager\CMeta.cs" />
+    <Compile Include="Compatibility\InMetaManager\CMetaManager.cs" />
+    <Compile Include="Compatibility\InMetaSR\InMetaApplication.cs" />
+    <Compile Include="Compatibility\InMetaSR\InMetaSession.cs" />
+    <Compile Include="Compatibility\InMetaUtils\InMetaHtmlUtils.cs" />
+    <Compile Include="Compatibility\InMetaUtils\InMetaSysUtils.cs" />
+    <Compile Include="Compatibility\InMetaUtils\InMetaXmlUtils.cs" />
+    <Compile Include="Compatibility\InMetaUtils\InMetaXStrUtils.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Integro\InMeta\Web\WebService.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,28 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Integro.InMeta.Runtime.ObjectViewPropertyLoader
+// Assembly: InMeta.ServerRuntime, Version=1.9.112.0, Culture=neutral, PublicKeyToken=null
+// MVID: 0B76D0ED-50A9-498A-8B76-23FDD608972C
+// Assembly location: V:\20210126 УЖКХ\InMeta_ServerRuntime_dll\InMeta.ServerRuntime.dll
+
+namespace Integro.InMeta.Runtime
+{
+  internal class ObjectViewPropertyLoader : ObjectViewParameterLoader
+  {
+    private readonly string FPropertyName;
+
+    public new static bool CanCreate(MetadataObjectView view, string name) => view.Class.Properties.Find(name) != null;
+
+    public static ObjectViewParameterLoader TryCreate(
+      MetadataObjectView view,
+      string name)
+    {
+      return ObjectViewPropertyLoader.CanCreate(view, name) ? (ObjectViewParameterLoader) new ObjectViewPropertyLoader(name) : (ObjectViewParameterLoader) null;
+    }
+
+    public ObjectViewPropertyLoader(string propertyName) => this.FPropertyName = propertyName;
+
+    public override void PrepareLoadPlan(LoadPlan plan, DataSession session) => PropertyValueGetter.PrepareLoadPlan(plan, session, this.FPropertyName);
+
+    public override object GetValue(DataObject obj) => PropertyValueGetter.GetValue(obj, this.FPropertyName);
+  }
+}
